@@ -1,5 +1,7 @@
 local LightChanger = {}
 
+local TweenService = game:GetService("TweenService")
+
 function LightChanger.ChangeLight(color)
         local CurrentRoom = game.Workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)]
 	for _, light in CurrentRoom.Assets:GetDescendants() do
