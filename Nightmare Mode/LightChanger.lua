@@ -1,5 +1,6 @@
-Elevation = function()
-   print("test")
-end
+local LightChanger = {}
 
+LightChanger function.ChangeLight()
+    print("test")
+end
 return LightChanger
