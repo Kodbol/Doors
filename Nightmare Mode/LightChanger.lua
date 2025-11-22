@@ -1,7 +1,7 @@
 return {
 
 ChangeLight = function(color)
-   local CurrentRoom = game.Workspace.CurrentRooms[tostring(LatestRoom.Value)]
+   local CurrentRoom = game.Workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)]
 	for _, light in CurrentRoom.Assets:GetDescendants() do
             if light.ClassName == "PointLight" or light.ClassName == "SpotLight" or light.ClassName == "SurfaceLight" then
 				local LightAnim = TweenService:Create(light, TweenInfo.new(2), {Color = color})
