@@ -15,10 +15,11 @@ function NightmareModeModule.ChangeLight(color)
 end
 
 function NightmareModeModule.BreakLights()
-    		game.Workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)].Assets.Light_Fixtures:Destroy()
-			for _, v in game.Workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)].Assets:GetDescendants() do
+                for _, v in game.Workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)]:GetDescendants() do
 				if v.Name == "Chandelier" then
 					v:Destroy()
+                elseif v.Name == "Light_Fixtures" or v.Name == "LightStand" then
+                    v:Destroy()
 				elseif v.Name == "FireLight" or v.Name == "FireParticles" or v.Name == "SmokeParticles" or v.Name == "SparkParticles" and v.Parent == "Log" then
 					v:Destroy()
 	    end
