@@ -1,5 +1,5 @@
 local Settings = {
-	["Status"] = "Working",
+	["Status"] = true,
 	["Reason"] = nil
 }
 
