@@ -1,6 +1,6 @@
 local Settings = {
-	["Status"] = false,
-	["Reason"] = "Testing."
+	["Status"] = true,
+	["Reason"] = nil
 }
 
 return Settings
