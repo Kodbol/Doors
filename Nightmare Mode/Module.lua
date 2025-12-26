@@ -1,4 +1,5 @@
 local NightmareModeModule = {}
+local Settings = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kodbol/Doors/refs/heads/main/Nightmare%20Mode/Settings.lua"))()
 
 function NightmareModeModule.ChangeLight(color)
 	    local TweenService = game:GetService("TweenService")
@@ -25,5 +26,13 @@ function NightmareModeModule.BreakLights()
 	    end
 	end
 end
-	
+
+function NightmareModeModule.CheckSettings()
+       for index, value in Settings do
+         if index == "Status" and value == false then
+		   game.Players.LocalPlayer:Kick("Nightmare mode not working, reason: " .. Settings["Reason"])
+	 end
+   end
+end
+
 return NightmareModeModule
